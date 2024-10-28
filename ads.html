@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,19 +17,22 @@
         background: transparent;
     }
     .typing-effect {
-        font-size: 4em;
+        font-size: 6vw; /* Responsive font size based on viewport width */
         border-right: 2px solid #FFD700;
-        white-space: nowrap;
+        white-space: normal; /* Allows text to wrap */
         overflow: hidden;
-        width: 24ch;
+        width: 90%; /* Limit width to fit smaller screens */
+        max-width: 30ch; /* Prevents text from being too wide on larger screens */
         animation: typing 5s steps(10, end) infinite, blink 1s step-end infinite alternate;
+        word-break: break-word; /* Ensures long words are broken if necessary */
+        text-align: center; /* Centers the text */
     }
     @keyframes typing {
         0%, 70%, 100% {
             width: 0;
         }
         80%, 90% {
-            width: 30ch;
+            width: 100%;
         }
     }
     @keyframes blink {
