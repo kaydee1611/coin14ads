@@ -16,19 +16,16 @@
         margin: 0;
         color: #FFD700;
         font-family: monospace;
-        overflow: hidden;
+        overflow: hidden; 
         background: transparent;
     }
     .typing-effect {
-        font-size: min(10vw, 10vh);
+        font-size: clamp(2em, 10vw, 10vh); 
         border-right: 2px solid #FFD700;
-        white-space: normal; 
-        overflow: hidden;
-        width: 100%;
-        max-width: 50ch;
+        white-space: normal;
+        text-align: center;
         animation: typing 5s steps(10, end) infinite, blink 1s step-end infinite alternate;
         word-break: break-word;
-        text-align: center;
     }
     @keyframes typing {
         0%, 70%, 100% {
